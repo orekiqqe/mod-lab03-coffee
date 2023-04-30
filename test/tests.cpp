@@ -1,4 +1,5 @@
 // Copyright 2023 UNN
+
 #include <gtest/gtest.h>
 #include "Automata.h"
 

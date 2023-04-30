@@ -1,4 +1,5 @@
 // Copyright 2023 UNN
+
 #ifndef INCLUDE_AUTOMATA_H_
 #define INCLUDE_AUTOMATA_H_
 
