@@ -3,7 +3,7 @@
 #include "Automata.h"
 
 TEST(Test, Tea) {
-    Automata automata;
+    Automata automata = Automata();
     automata.on();
     automata.etMenu();
     EXPECT_EQ(automata.getState(), WAIT);
@@ -23,7 +23,7 @@ TEST(Test, Tea) {
 
 
 TEST(Test, Coffee) {
-    Automata automata;
+    Automata automata = Automata();
     automata.on();
     automata.etMenu();
     EXPECT_EQ(automata.getState(), WAIT);
@@ -42,7 +42,7 @@ TEST(Test, Coffee) {
 }
 
 TEST(Test, Milk) {
-    Automata automata;
+    Automata automata = Automata();
     automata.on();
     automata.etMenu();
     EXPECT_EQ(automata.getState(), WAIT);
