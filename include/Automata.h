@@ -1,6 +1,6 @@
 // Copyright 2023 UNN
-#ifndef INCLUDE_AUTOMATA_H
-#define INCLUDE_AUTOMATA_H
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
 
 #include <iostream>
 #include <string>
@@ -33,4 +33,4 @@ class Automata {
     void finish();
 };
 
-#endif // INCLUDE_AUTOMATA_H
+#endif // INCLUDE_AUTOMATA_H_
