@@ -31,6 +31,9 @@ class Automata {
     void cancel();
     void cook(int drinkNumber);
     void finish();
+    STATES getState() {
+        return state;
+    }
 };
 
 #endif // INCLUDE_AUTOMATA_H_
