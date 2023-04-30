@@ -2,7 +2,7 @@
 #include "Automata.h"
 
 int main() {
-    Automata automata;
+    Automata automata = Automata();
     automata.on();
     automata.etMenu();
     automata.coin(50);
