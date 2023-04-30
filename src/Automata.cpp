@@ -26,8 +26,8 @@ void Automata::coin(int userCash) {
 }
 
 void Automata::etMenu() {
-    std::vector<std::string> menu = { "Tea", "Coffee", "Milk" };
-    std::vector<int> prices = { 50, 80, 30 };
+    menu = { "Tea", "Coffee", "Milk" };
+    prices = { 50, 80, 30 };
 }
 
 void Automata::choice(int drinkNumber) {
