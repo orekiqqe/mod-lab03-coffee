@@ -2,7 +2,7 @@
 #include <gtest/gtest.h>
 #include "Automata.h"
 
-TEST(Test, Tea) {
+TEST(AutomataTest, Tea) {
     Automata automata = Automata();
     automata.on();
     automata.etMenu();
@@ -22,7 +22,7 @@ TEST(Test, Tea) {
 }
 
 
-TEST(Test, Coffee) {
+TEST(AutomataTest, Coffee) {
     Automata automata = Automata();
     automata.on();
     automata.etMenu();
@@ -41,7 +41,7 @@ TEST(Test, Coffee) {
     EXPECT_EQ(automata.getState(), OFF);
 }
 
-TEST(Test, Milk) {
+TEST(AutomataTest, Milk) {
     Automata automata = Automata();
     automata.on();
     automata.etMenu();
