@@ -29,10 +29,6 @@ void Automata::etMenu() {
     std::vector<int> prices = { 50, 80, 30 };
 }
 
-STATES Automata::getState() {
-    return state;
-}
-
 void Automata::choice(int drinkNumber) {
     if (state == ACCEPT || state == WAIT) {
         if (cash >= prices[drinkNumber - 1]) {
