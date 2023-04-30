@@ -6,19 +6,19 @@ TEST(AutomataTest, Tea) {
     Automata automata = Automata();
     automata.on();
     automata.etMenu();
-    EXPECT_EQ(automata.getState(), WAIT);
+    EXPECT_EQ(automata.getState(), STATES::WAIT);
     automata.coin(50);
-    EXPECT_EQ(automata.getState(), ACCEPT);
+    EXPECT_EQ(automata.getState(), STATES::ACCEPT);
     automata.cancel();
-    EXPECT_EQ(automata.getState(), WAIT);
+    EXPECT_EQ(automata.getState(), STATES::WAIT);
     automata.choice(1);
-    EXPECT_EQ(automata.getState(), CHECK);
+    EXPECT_EQ(automata.getState(), STATES::CHECK);
     automata.cook(1);
-    EXPECT_EQ(automata.getState(), COOK);
+    EXPECT_EQ(automata.getState(), STATES::COOK);
     automata.finish();
-    EXPECT_EQ(automata.getState(), WAIT);
+    EXPECT_EQ(automata.getState(), STATES::WAIT);
     automata.off();
-    EXPECT_EQ(automata.getState(), OFF);
+    EXPECT_EQ(automata.getState(), STATES::OFF);
 }
 
 
@@ -26,36 +26,36 @@ TEST(AutomataTest, Coffee) {
     Automata automata = Automata();
     automata.on();
     automata.etMenu();
-    EXPECT_EQ(automata.getState(), WAIT);
+    EXPECT_EQ(automata.getState(), STATES::WAIT);
     automata.coin(80);
-    EXPECT_EQ(automata.getState(), ACCEPT);
+    EXPECT_EQ(automata.getState(), STATES::ACCEPT);
     automata.cancel();
-    EXPECT_EQ(automata.getState(), WAIT);
+    EXPECT_EQ(automata.getState(), STATES::WAIT);
     automata.choice(2);
-    EXPECT_EQ(automata.getState(), CHECK);
+    EXPECT_EQ(automata.getState(), STATES::CHECK);
     automata.cook(2);
-    EXPECT_EQ(automata.getState(), COOK);
+    EXPECT_EQ(automata.getState(), STATES::COOK);
     automata.finish();
-    EXPECT_EQ(automata.getState(), WAIT);
+    EXPECT_EQ(automata.getState(), STATES::WAIT);
     automata.off();
-    EXPECT_EQ(automata.getState(), OFF);
+    EXPECT_EQ(automata.getState(), STATES::OFF);
 }
 
 TEST(AutomataTest, Milk) {
     Automata automata = Automata();
     automata.on();
     automata.etMenu();
-    EXPECT_EQ(automata.getState(), WAIT);
+    EXPECT_EQ(automata.getState(), STATES::WAIT);
     automata.coin(30);
-    EXPECT_EQ(automata.getState(), ACCEPT);
+    EXPECT_EQ(automata.getState(), STATES::ACCEPT);
     automata.cancel();
-    EXPECT_EQ(automata.getState(), WAIT);
+    EXPECT_EQ(automata.getState(), STATES::WAIT);
     automata.choice(3);
-    EXPECT_EQ(automata.getState(), CHECK);
+    EXPECT_EQ(automata.getState(), STATES::CHECK);
     automata.cook(3);
-    EXPECT_EQ(automata.getState(), COOK);
+    EXPECT_EQ(automata.getState(), STATES::COOK);
     automata.finish();
-    EXPECT_EQ(automata.getState(), WAIT);
+    EXPECT_EQ(automata.getState(), STATES::WAIT);
     automata.off();
-    EXPECT_EQ(automata.getState(), OFF);
+    EXPECT_EQ(automata.getState(), STATES::OFF);
 }

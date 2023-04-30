@@ -2,24 +2,24 @@
 #include "Automata.h"
 
 Automata::Automata() {
-    state = OFF;
+    state = STATES::OFF;
     cash = 0;
 }
 
 void Automata::on() {
-    state = WAIT;
+    state = STATES::WAIT;
 }
 
 void Automata::off() {
-    if (state == WAIT) {
-        state = OFF;
+    if (state == STATES::WAIT) {
+        state = STATES::OFF;
     }
 }
 
 
 void Automata::coin(int userCash) {
-    if (state == ACCEPT || state == WAIT) {
-        state = ACCEPT;
+    if (state == STATES::ACCEPT || state == STATES::WAIT) {
+        state = STATES::ACCEPT;
         cash += userCash;
     }
 }
@@ -34,28 +34,28 @@ STATES Automata::getState() {
 }
 
 void Automata::choice(int drinkNumber) {
-    if (state == ACCEPT || state == WAIT) {
+    if (state == STATES::ACCEPT || state == STATES::WAIT) {
         if (cash >= prices[drinkNumber - 1]) {
-            state = CHECK;
+            state = STATES::CHECK;
         }
     }
 }
 
 void Automata::cancel() {
-    if (state == ACCEPT || state == CHECK) {
-        state = WAIT;
+    if (state == STATES::ACCEPT || state == STATES::CHECK) {
+        state = STATES::WAIT;
     }
 }
 
 void Automata::cook(int drinkNumber) {
-    if (state == CHECK) {
-        state = COOK;
+    if (state == STATES::CHECK) {
+        state = STATES::COOK;
         cash -= prices[drinkNumber - 1];
     }
 }
 
 void Automata::finish() {
-    if (state == COOK) {
-        state = WAIT;
+    if (state == STATES::COOK) {
+        state = STATES::WAIT;
     }
 }
