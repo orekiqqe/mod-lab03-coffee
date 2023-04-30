@@ -26,7 +26,6 @@ class Automata {
     void off();
     void coin(int userCash);
     void etMenu();
-    STATES getState();
     void choice(int drinkNumber);
     void cancel();
     void cook(int drinkNumber);
